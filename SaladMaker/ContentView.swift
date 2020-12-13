@@ -21,9 +21,9 @@ struct ContentView: View {
         case .notStarted:
             return AnyView(SaladNotStartedView(onPrepareTapped: { self.saladStatus = .prepping }))
         case .prepping:
-            return AnyView(SaladPreppingView(onSaladPrepped: { self.saladStatus = .completed }))
+            return AnyView(SaladPreppingView(onSaladPrepped: { self.saladStatus = .completed }, onCancelSalad: { self.saladStatus = .notStarted }))
         case .completed:
-            return AnyView(SaladCompletedView())
+            return AnyView(SaladCompletedView(restart: { self.saladStatus = .notStarted }))
         }
     }
 }

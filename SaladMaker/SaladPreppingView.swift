@@ -16,17 +16,31 @@ struct IngredientPrepping: Identifiable {
 
 struct SaladPreppingView: View {
     let onSaladPrepped: () -> ()
+    let onCancelSalad: () -> ()
     
     @State var ingredientsPrepping: [IngredientPrepping] = Ingredient.allCases.map({ IngredientPrepping(ingredient: $0, preppingStatus: .prepping) })
     
-    init(onSaladPrepped: @escaping () -> ()) {
+    init(onSaladPrepped: @escaping () -> (),
+         onCancelSalad: @escaping () -> ()) {
         self.onSaladPrepped = onSaladPrepped
+        self.onCancelSalad = onCancelSalad
     }
     
     var body: some View {
-        List(ingredientsPrepping) { ingredientPrepping in
-            IngredientPreppingView(ingredient: ingredientPrepping.ingredient, status: ingredientPrepping.preppingStatus)
-        }.onAppear {
+        VStack {
+            List(ingredientsPrepping) { ingredientPrepping in
+                IngredientPreppingView(ingredient: ingredientPrepping.ingredient, status: ingredientPrepping.preppingStatus)
+            }
+            Button(action: self.onCancelSalad, label: {
+                Text("Cancel")
+                    .foregroundColor(.white)
+                    .padding(.all, 12)
+                    .background(Color.blue)
+                    .cornerRadius(5.0)
+            })
+            .padding()
+        }
+        .onAppear {
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
                 SaladMaker().make { (ingredient) in
                     let index = self.ingredientsPrepping.firstIndex(where: { $0.ingredient == ingredient })!
@@ -41,7 +55,9 @@ struct SaladPreppingView: View {
     
     func serveSaladIfAllReady() {
         if self.ingredientsPrepping.filter({ $0.preppingStatus == .ready }).count == self.ingredientsPrepping.count {
-            self.onSaladPrepped()
+            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { (_) in
+                self.onSaladPrepped()
+            }
         }
     }
 }
@@ -49,6 +65,8 @@ struct SaladPreppingView: View {
 struct SaladPreppingView_Previews: PreviewProvider {
     static var previews: some View {
         SaladPreppingView(onSaladPrepped: {
+            
+        }, onCancelSalad: {
             
         })
     }
