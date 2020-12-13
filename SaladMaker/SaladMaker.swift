@@ -9,11 +9,16 @@ import Foundation
 
 class SaladMaker {
     
-    func make(onIngrdientPrepped: @escaping (Ingredient) -> ()) {
+    func make(onIngredientPrepped: @escaping (Ingredient) -> ()) {
+        let worker1 = DispatchQueue(label: "salad_maker_queue")
         Ingredient.allCases.forEach { (ingredient) in
-            sleep(1)
-            // completed ingredient prep
-            onIngrdientPrepped(ingredient)
+            worker1.async {
+                let randomPrepTime = UInt32.random(in: 1...3)
+                sleep(randomPrepTime)
+                DispatchQueue.main.async {
+                    onIngredientPrepped(ingredient)
+                }
+            }
         }
     }
 }
