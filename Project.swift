@@ -12,7 +12,10 @@ let project = Project(
             infoPlist: "SaladMaker/Info.plist",
             sources: ["SaladMaker/**"],
             resources: ["SaladMaker/Assets.xcassets/"],
-            dependencies: [.target(name: "SayHelloKit")]
+            dependencies: [
+                .target(name: "SayHelloKit"),
+                .external(name: "Alamofire")
+            ]
         ),
         Target(
             name: "SayHelloKit",
