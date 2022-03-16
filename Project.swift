@@ -15,7 +15,8 @@ let project = Project(
             dependencies: [
                 .target(name: "SayHelloKit"),
                 .external(name: "Alamofire")
-            ]
+            ],
+            settings: .settings(base: ["ENABLE_BITCODE": "NO"])
         ),
         Target(
             name: "SayHelloKit",
