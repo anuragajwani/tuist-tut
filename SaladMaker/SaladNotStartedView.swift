@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SayHelloKit
 
 struct SaladNotStartedView: View {
     let onPrepareTapped: () -> ()
@@ -20,6 +21,7 @@ struct SaladNotStartedView: View {
                     .background(Color.blue)
                     .cornerRadius(5.0)
             })
+            Text(sayHello())
         }
     }
 }

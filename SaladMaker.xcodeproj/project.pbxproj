@@ -17,7 +17,35 @@
 		1B7DBBEA258549B8008745A8 /* IngredientPreppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DBBE9258549B8008745A8 /* IngredientPreppingView.swift */; };
 		1B7DBBED25854A34008745A8 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DBBEC25854A34008745A8 /* Ingredient.swift */; };
 		1B7DBBF02585502E008745A8 /* SaladMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7DBBEF2585502E008745A8 /* SaladMaker.swift */; };
+		7F0C5BB827E17C9E00EC0512 /* SayHelloKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F0C5BB727E17C9E00EC0512 /* SayHelloKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F0C5BBB27E17C9E00EC0512 /* SayHelloKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0C5BB527E17C9E00EC0512 /* SayHelloKit.framework */; };
+		7F0C5BBC27E17C9E00EC0512 /* SayHelloKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0C5BB527E17C9E00EC0512 /* SayHelloKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F0C5BC227E17CAB00EC0512 /* SayHello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0C5BC127E17CAB00EC0512 /* SayHello.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F0C5BB927E17C9E00EC0512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B7DBBC52584FCF7008745A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F0C5BB427E17C9E00EC0512;
+			remoteInfo = SayHelloKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7F0C5BBD27E17C9E00EC0512 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7F0C5BBC27E17C9E00EC0512 /* SayHelloKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1B7DBBCD2584FCF7008745A8 /* SaladMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaladMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +60,21 @@
 		1B7DBBE9258549B8008745A8 /* IngredientPreppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientPreppingView.swift; sourceTree = "<group>"; };
 		1B7DBBEC25854A34008745A8 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		1B7DBBEF2585502E008745A8 /* SaladMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaladMaker.swift; sourceTree = "<group>"; };
+		7F0C5BB527E17C9E00EC0512 /* SayHelloKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SayHelloKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0C5BB727E17C9E00EC0512 /* SayHelloKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SayHelloKit.h; sourceTree = "<group>"; };
+		7F0C5BC127E17CAB00EC0512 /* SayHello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayHello.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B7DBBCA2584FCF7008745A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0C5BBB27E17C9E00EC0512 /* SayHelloKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F0C5BB227E17C9E00EC0512 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7DBBCF2584FCF7008745A8 /* SaladMaker */,
+				7F0C5BB627E17C9E00EC0512 /* SayHelloKit */,
 				1B7DBBCE2584FCF7008745A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7DBBCD2584FCF7008745A8 /* SaladMaker.app */,
+				7F0C5BB527E17C9E00EC0512 /* SayHelloKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +128,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7F0C5BB627E17C9E00EC0512 /* SayHelloKit */ = {
+			isa = PBXGroup;
+			children = (
+				7F0C5BB727E17C9E00EC0512 /* SayHelloKit.h */,
+				7F0C5BC127E17CAB00EC0512 /* SayHello.swift */,
+			);
+			path = SayHelloKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7F0C5BB027E17C9E00EC0512 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0C5BB827E17C9E00EC0512 /* SayHelloKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1B7DBBCC2584FCF7008745A8 /* SaladMaker */ = {
@@ -97,15 +158,35 @@
 				1B7DBBC92584FCF7008745A8 /* Sources */,
 				1B7DBBCA2584FCF7008745A8 /* Frameworks */,
 				1B7DBBCB2584FCF7008745A8 /* Resources */,
+				7F0C5BBD27E17C9E00EC0512 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7F0C5BBA27E17C9E00EC0512 /* PBXTargetDependency */,
 			);
 			name = SaladMaker;
 			productName = SaladMaker;
 			productReference = 1B7DBBCD2584FCF7008745A8 /* SaladMaker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7F0C5BB427E17C9E00EC0512 /* SayHelloKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F0C5BC027E17C9E00EC0512 /* Build configuration list for PBXNativeTarget "SayHelloKit" */;
+			buildPhases = (
+				7F0C5BB027E17C9E00EC0512 /* Headers */,
+				7F0C5BB127E17C9E00EC0512 /* Sources */,
+				7F0C5BB227E17C9E00EC0512 /* Frameworks */,
+				7F0C5BB327E17C9E00EC0512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SayHelloKit;
+			productName = SayHelloKit;
+			productReference = 7F0C5BB527E17C9E00EC0512 /* SayHelloKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -118,6 +199,10 @@
 				TargetAttributes = {
 					1B7DBBCC2584FCF7008745A8 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					7F0C5BB427E17C9E00EC0512 = {
+						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -135,6 +220,7 @@
 			projectRoot = "";
 			targets = (
 				1B7DBBCC2584FCF7008745A8 /* SaladMaker */,
+				7F0C5BB427E17C9E00EC0512 /* SayHelloKit */,
 			);
 		};
 /* End PBXProject section */
@@ -146,6 +232,13 @@
 			files = (
 				1B7DBBD82584FCF7008745A8 /* Preview Assets.xcassets in Resources */,
 				1B7DBBD52584FCF7008745A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F0C5BB327E17C9E00EC0512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +260,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F0C5BB127E17C9E00EC0512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0C5BC227E17CAB00EC0512 /* SayHello.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F0C5BBA27E17C9E00EC0512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F0C5BB427E17C9E00EC0512 /* SayHelloKit */;
+			targetProxy = 7F0C5BB927E17C9E00EC0512 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1B7DBBDA2584FCF7008745A8 /* Debug */ = {
@@ -289,6 +398,7 @@
 		1B7DBBDD2584FCF7008745A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +421,7 @@
 		1B7DBBDE2584FCF7008745A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +438,73 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7F0C5BBE27E17C9E00EC0512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 44H9U6N2S5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anuragajwani.SayHelloKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7F0C5BBF27E17C9E00EC0512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 44H9U6N2S5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anuragajwani.SayHelloKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -347,6 +525,15 @@
 			buildConfigurations = (
 				1B7DBBDD2584FCF7008745A8 /* Debug */,
 				1B7DBBDE2584FCF7008745A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F0C5BC027E17C9E00EC0512 /* Build configuration list for PBXNativeTarget "SayHelloKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F0C5BBE27E17C9E00EC0512 /* Debug */,
+				7F0C5BBF27E17C9E00EC0512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
